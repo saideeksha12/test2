@@ -10,7 +10,7 @@ public class LoginMain {
 
 		FERService ferService = new FERServiceImpl();
 
-		boolean login = ferService.login("divya", "divya1");
+		boolean login = ferService.login("admin", "1234");
 
 		if (login) {
 			System.out.println("Logged in successfully");
