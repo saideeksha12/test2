@@ -9,34 +9,34 @@ public class UpdateUserMain {
 
 	public static void main(String[] args) {
 
-		FERService ferservice = new FERServiceImpl();
+		FERService ferService = new FERServiceImpl();
+
 		User user = new User();
-		user.setFirstname("Navya");
-		user.setMiddlename("Swamy");
-		user.setLastname("M");
-		user.setEmailId("dinesh@gmail.com");
-		user.setMobileno("1245556660");
-		user.setId(12);
+
+		user.setId(1);
+		user.setFirstname("sai");
+		user.setMiddlename("pavan");
+		user.setLastname("r");
+		user.setEmailId("rs@gamil.com");
+		user.setMobileno("122637373");
 
 		Address address = new Address();
-		address.setId(8);
-		address.setAddress1("Miyapur");
-		address.setAddress2("Hyd");
-		address.setStreet("Mahadevapuram Colony");
-		address.setArea("Kphb");
-		address.setCity("Hyderabad");
-		address.setState("TG");
-		address.setPincode(500049);
-		address.setUserid(26);
+		address.setId(3);
+		address.setAddress1("madhapur");
+		address.setAddress2("hyd");
+		address.setCity("HYD");
+		address.setState("TS");
+		address.setPincode(6374789);
+		address.setUserid(2);
 
 		user.setAddress(address);
-		boolean updateUser = ferservice.updateUser(user);
-		if (updateUser) {
-
-			System.out.println("User updated successfully");
+		boolean updatePersonal = ferService.updateUser(user);
+		if (updatePersonal) {
+			System.out.println("successfully...");
 		} else {
-			System.out.println("Update failed");
+			System.out.println("Failed..");
 		}
 
 	}
+
 }
