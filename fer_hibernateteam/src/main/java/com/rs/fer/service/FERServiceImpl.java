@@ -98,18 +98,22 @@ public class FERServiceImpl implements FERService {
 		Session session = HBUtil.getSession();
 
 		try {
+
 			Expense expense = (Expense) session.load(Expense.class, new Integer(expenseId));
+
 			session.delete(expense);
 			HBUtil.getTransactionCommit();
-			isDeleted = true;
-		} catch (Exception e) {
-			isDeleted = false;
-			e.printStackTrace();
 
+			isDeleted = true;
+
+		} catch (Exception e) {
+			isDeleted = true;
+
+			e.printStackTrace();
 		} finally {
 			HBUtil.closeSession();
-		}
 
+		}
 		return isDeleted;
 	}
 

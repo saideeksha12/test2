@@ -13,12 +13,13 @@ public class EditExpenseMain {
 
 		Expense expense = new Expense();
 
-		expense.setExpensetype("Vegetables");
+		expense.setId(11);
+		expense.setExpensetype("co");
 		expense.setDate("26/12/2019");
-		expense.setPrice(1000);
+		expense.setPrice(400);
 		expense.setNoofItems(2);
 		expense.setTotal(300);
-		expense.setBywhom("anu");
+		expense.setBywhom("jen");
 		expense.setUserid(8);
 
 		boolean isEditExpense = ferservice.editExpense(expense);
