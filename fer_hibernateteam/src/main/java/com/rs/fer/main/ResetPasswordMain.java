@@ -9,7 +9,7 @@ public class ResetPasswordMain {
 	public static void main(String[] args) {
 		FERService ferservice = new FERServiceImpl();
 
-		boolean isReset = ferservice.resetPassword(1, "naga1", "naga1");
+		boolean isReset = ferservice.resetPassword(1, "admin", "naga1");
 
 		if (isReset) {
 			System.out.println("password changed successfully");
