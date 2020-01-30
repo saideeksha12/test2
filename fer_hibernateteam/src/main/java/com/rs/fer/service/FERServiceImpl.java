@@ -110,26 +110,26 @@ public class FERServiceImpl implements FERService {
 	}
 
 	public boolean resetPassword(int userId, String currentPassword, String newPassword) {
-		boolean isReset = false;
+
+		boolean resetPassword = false;
 		Session session = HBUtil.getSession();
 		try {
-
 			User user = (User) session.load(User.class, userId);
 			if (currentPassword.equals(user.getPassword())) {
 				user.setPassword(newPassword);
 				HBUtil.getTransactionCommit();
-				isReset = true;
+				resetPassword = true;
 			}
-			System.out.println(newPassword + "," + userId + "," + currentPassword);
+			System.out.println(newPassword + ", " + userId + ", " + currentPassword);
 
 		} catch (Exception e) {
-			isReset = false;
+			resetPassword = false;
 			e.printStackTrace();
-
 		} finally {
 			HBUtil.closeSession();
 		}
-		return isReset;
+
+		return resetPassword;
 	}
 
 	public Expense getExpense(int expenseId) {
