@@ -12,7 +12,7 @@ public class AddExpenseMain {
 
 		Expense expense = new Expense();
 
-		expense.setExpensetype("chocolates");
+		expense.setExpensetype("chocolate");
 		expense.setDate("28/01/2020");
 		expense.setPrice(200);
 		expense.setNoofItems(2);
