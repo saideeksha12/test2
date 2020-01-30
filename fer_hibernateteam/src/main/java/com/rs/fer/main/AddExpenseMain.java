@@ -12,11 +12,11 @@ public class AddExpenseMain {
 
 		Expense expense = new Expense();
 
-		expense.setExpensetype("Vegetables");
-		expense.setDate("26/12/2019");
-		expense.setPrice(100);
+		expense.setExpensetype("bergers");
+		expense.setDate("30/01/2020");
+		expense.setPrice(500);
 		expense.setNoofItems(2);
-		expense.setTotal(200);
+		expense.setTotal(1000);
 		expense.setBywhom("anu");
 		expense.setUserid(1);
 
