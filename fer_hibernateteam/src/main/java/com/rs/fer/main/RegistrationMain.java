@@ -11,14 +11,14 @@ public class RegistrationMain {
 		FERService ferservice = new FERServiceImpl();
 
 		User user = new User();
-		user.setFirstname("Divya");
-		user.setMiddlename("Sri");
-		user.setLastname("N");
+		user.setFirstname("anil");
+		user.setMiddlename("kumar");
+		user.setLastname("atthaluri");
 
-		user.setUsername("divya1");
-		user.setPassword("divya1");
+		user.setUsername("anil");
+		user.setPassword("1234");
 
-		user.setEmailId("divya@gmail.com");
+		user.setEmailId("anil@gmail.com");
 		user.setMobileno("1234567890");
 
 		boolean isRegister = ferservice.registration(user);
