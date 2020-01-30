@@ -9,7 +9,7 @@ public class DeleteExpenseMain {
 
 		FERService ferservice = new FERServiceImpl();
 
-		boolean isDelete = ferservice.deleteExpense(3);
+		boolean isDelete = ferservice.deleteExpense(2);
 		if (isDelete) {
 			System.out.println("expense deleted successfully");
 		} else {
