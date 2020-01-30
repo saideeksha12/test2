@@ -12,11 +12,16 @@ public class GetExpensesMain {
 	public static void main(String[] args) {
 
 		FERService ferservice = new FERServiceImpl();
-		int userid = 1;
+		int userid = 2;
 		List<Expense> expenses = ferservice.getExpenses(userid);
-
-		for (Expense expense : expenses) {
-			System.out.println(expense.getId());
+		if (expenses == null) {
+			System.out.println("expense fetched failed:");
+		} else {
+			for (Expense expense : expenses) {
+				System.out.println("expense:" + expense.getExpensetype() + "," + expense.getBywhom() + ","
+						+ expense.getPrice() + "," + expense.getNoofItems() + "," + expense.getTotal() + ","
+						+ expense.getBywhom() + "," + expense.getUserid());
+			}
 		}
 
 	}

@@ -11,8 +11,15 @@ public class GetExpenseMain {
 
 		FERService ferservice = new FERServiceImpl();
 
-		int expenseId = 1;
+		int expenseId = 2;
 		Expense expense = ferservice.getExpense(expenseId);
+		if (expense == null) {
+			System.out.println("expense fetched failed:");
+		} else {
+			System.out.println("expense:" + expense.getExpensetype() + "," + expense.getBywhom() + ","
+					+ expense.getPrice() + "," + expense.getNoofItems() + "," + expense.getTotal() + ","
+					+ expense.getBywhom() + "," + expense.getUserid());
+		}
 
 	}
 
