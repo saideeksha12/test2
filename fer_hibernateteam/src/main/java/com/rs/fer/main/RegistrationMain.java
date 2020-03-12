@@ -29,5 +29,5 @@ public class RegistrationMain {
 			System.out.println("Registration failed");
 		}
 
-	}
+	}//
 }
